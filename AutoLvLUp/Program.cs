@@ -143,15 +143,15 @@ namespace AutoSpellUp
                     AbilitySequence = new[] { 1, 3, 1, 2, 1, 4, 1, 3, 1, 3, 4, 3, 3, 2, 2, 4, 2, 2 };
                     break;
                 case "Ezreal":
-                    if (heal != null && heal.Slot != SpellSlot.Unknown)
-                    {
-                        AbilitySequence = new[] { 1, 3, 1, 2, 1, 4, 1, 3, 1, 3, 4, 3, 3, 2, 2, 4, 2, 2 };
-                        Tipo = " AD";
-                    }
-                    else
+                    if (Player.TotalMagicalDamage > 0)
                     {
                         AbilitySequence = new[] { 1, 2, 3, 2, 2, 4, 2, 1, 2, 1, 4, 1, 1, 3, 3, 4, 3, 3 };
                         Tipo = " AP";
+                    }
+                    else
+                    {
+                        AbilitySequence = new[] { 1, 3, 1, 2, 1, 4, 1, 3, 1, 3, 4, 3, 3, 2, 2, 4, 2, 2 };
+                        Tipo = " AD";
                     }
                     break;
                 case "Ekko":
@@ -262,15 +262,15 @@ namespace AutoSpellUp
                     AbilitySequence = new[] { 2, 1, 3, 1, 1, 4, 1, 3, 1, 3, 4, 3, 3, 2, 2, 4, 2, 2 };
                     break;
                 case "KogMaw":
-                    if (heal != null && heal.Slot != SpellSlot.Unknown)
-                    {
-                        AbilitySequence = new[] { 2, 1, 3, 2, 2, 4, 2, 1, 2, 1, 4, 1, 1, 3, 3, 4, 3, 3 };
-                        Tipo = " AD";
-                    }
-                    else
+                    if (Player.TotalMagicalDamage > 0)
                     {
                         AbilitySequence = new[] { 3, 2, 1, 3, 3, 4, 3, 1, 3, 1, 4, 1, 1, 2, 2, 4, 2, 2 };
                         Tipo = " AP";
+                    }
+                    else
+                    {
+                        AbilitySequence = new[] { 2, 1, 3, 2, 2, 4, 2, 1, 2, 1, 4, 1, 1, 3, 3, 4, 3, 3 };
+                        Tipo = " AD";
                     }
                     break;
                 case "Leblanc":
